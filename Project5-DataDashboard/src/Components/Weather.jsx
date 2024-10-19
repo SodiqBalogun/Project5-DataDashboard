@@ -1,19 +1,23 @@
-const Weather = ({} = props) => {
+const Weather = ({dates, temps, humidities, pressures} = props) => {
     return (
         <div className="Weather">
             <p> This is my Weather Component! </p>
-            <div class="weatherCols">
-                <div class="dateCol">
+            <div className="weatherCols">
+                <div className="dateCol">
                     <h3> Date </h3>
+                    {dates}
                 </div>
-                <div class="tempCol">
+                <div className="tempCol">
                     <h3> Temperature </h3>
+                    {temps}
                 </div>
-                <div class="humidCol">
+                <div className="humidCol">
                     <h3> Humidity </h3>
+                    {humidities}
                 </div>
-                <div class="pressureCol">
+                <div className="pressureCol">
                     <h3> Pressure </h3>
+                    {pressures}
                 </div>
             </div>
         </div>
