@@ -17,7 +17,7 @@ const App = () => {
     console.log(info);
     console.log(info.city_name);
     setFetchResult(info.data[0]);
-    setCityInfo(cityInfo.cityName=info.city_name, cityInfo.country=info.country_code, cityInfo.state=info.state_code);
+    setCityInfo({cityName:info.city_name, country:info.country_code, state:info.state_code});
   }
 
   useEffect (() => {
@@ -26,19 +26,23 @@ const App = () => {
 
   return (
     <div className="App"> 
-      <h1> Weather App </h1>
-      <div class="cityInfo">
-        <p> This joint is working </p>
-        <p> {cityInfo.cityName} </p>
+      <div class="sideNav">
+        <h1> Weather App </h1>
       </div>
-      <div class="currSummary">
-        
+      <div class="rest">
+        <div class="cityInfo">
+          <h1> {cityInfo.cityName} </h1>
+          <h2> {cityInfo.cityName}, {cityInfo.country}, {cityInfo.state} </h2>
+        </div>
+        <div class="currSummary">
+
+        </div>
+        <h1> This is Sodiq! </h1>
+        <p> {fetchResult.temp} </p>
+        <Weather></Weather>
       </div>
-      <h1> This is Sodiq! </h1>
-      <p> {fetchResult.temp} </p>
-      <Weather></Weather>
     </div>
   )
 }
 
-export default App
+export default App;
