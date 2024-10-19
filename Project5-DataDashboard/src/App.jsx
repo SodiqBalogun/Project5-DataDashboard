@@ -27,19 +27,24 @@ const App = () => {
   return (
     <div className="App"> 
       <div class="sideNav">
-        <h1> Weather App </h1>
+        <h2> Weather App </h2>
       </div>
       <div class="rest">
-        <div class="cityInfo">
-          <h1> {cityInfo.cityName} </h1>
-          <h2> {cityInfo.cityName}, {cityInfo.country}, {cityInfo.state} </h2>
+        <div class="topBar">
+          <div class="cityInfo">
+            <h2> {cityInfo.cityName} </h2>
+            <h3> {cityInfo.cityName}, {cityInfo.country}, {cityInfo.state} </h3>
+          </div>
+          <div class="currSummary">
+            <h2> Average Weather </h2>
+            <p> (For current Day) </p>
+          </div>
         </div>
-        <div class="currSummary">
-
+        <div class="mainFunc"> 
+          <h1> This is Sodiq! </h1>
+          <p> {fetchResult.temp} </p>
+          <Weather></Weather>
         </div>
-        <h1> This is Sodiq! </h1>
-        <p> {fetchResult.temp} </p>
-        <Weather></Weather>
       </div>
     </div>
   )
