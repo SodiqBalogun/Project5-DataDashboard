@@ -41,7 +41,6 @@ const App = () => {
           </div>
         </div>
         <div class="mainFunc"> 
-          <h1> This is Sodiq! </h1>
           <p> {fetchResult.temp} </p>
           <Weather></Weather>
         </div>

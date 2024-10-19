@@ -48,6 +48,12 @@
   border-radius: 5%;
 }
 
+.weatherCols {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 50px 0px 50px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
