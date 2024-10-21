@@ -42,15 +42,15 @@ const App = () => {
             <div className="summariesCont"> 
               <div className="currSummary">
                 <h2> Average Temperature </h2>
-                <p> {} </p>
+                <h3> {Math.floor(fetchResult.reduce((acc, day) => acc + day.temp, 0) / fetchResult.length)} °F</h3>
               </div>
               <div className="currSummary">
                 <h2> Average Relative Humidity </h2>
-                <p> {} </p>
+                <h3> {Math.floor(fetchResult.reduce((acc, day) => acc + day.rh, 0) / fetchResult.length)}% </h3>
               </div>
               <div className="currSummary">
                 <h2> Average Pressure </h2>
-                <p> {} </p>
+                <h3> {Math.floor(fetchResult.reduce((acc, day) => acc + day.pres, 0) / fetchResult.length)} mb</h3>
               </div>
             </div>
           </div>
