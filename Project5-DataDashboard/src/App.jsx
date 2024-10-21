@@ -38,17 +38,20 @@ const App = () => {
             <h3> {cityInfo.cityName}, {cityInfo.country}, {cityInfo.state} </h3>
           </div>
           <div className="summaries">
-            <div className="currSummary">
-              <h2> Average Temperature </h2>
-              <p> (For current Period) </p>
-            </div>
-            <div className="currSummary">
-              <h2> Average Relative Humidity </h2>
-              <p> (For current Period) </p>
-            </div>
-            <div className="currSummary">
-              <h2> Average Pressure </h2>
-              <p> (For current Period) </p>
+            <h3> Averages for the Current Time Range </h3>
+            <div className="summariesCont"> 
+              <div className="currSummary">
+                <h2> Average Temperature </h2>
+                <p> {} </p>
+              </div>
+              <div className="currSummary">
+                <h2> Average Relative Humidity </h2>
+                <p> {} </p>
+              </div>
+              <div className="currSummary">
+                <h2> Average Pressure </h2>
+                <p> {} </p>
+              </div>
             </div>
           </div>
         </div>

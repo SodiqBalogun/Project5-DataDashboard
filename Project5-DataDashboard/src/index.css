@@ -37,6 +37,18 @@
   margin-left: 30px;
 }
 
+.cityInfo {
+  height: 200px;
+}
+
+.summaries {
+  display: grid;
+}
+
+.summariesCont {
+  display: flex;
+}
+
 .currSummary {
   background-color:#747bff;
 }
