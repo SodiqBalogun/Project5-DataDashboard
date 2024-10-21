@@ -36,9 +36,9 @@ const App = () => {
         <div className="topBar">
           <div className="cityInfo">
             <h2> {cityInfo.cityName !== undefined ? cityInfo.cityName : "Chicago"} </h2>
-            <h3> {cityInfo.cityName !== undefined ? cityInfo.cityName : "Chicago"}, 
-                 {cityInfo.country !== undefined ? cityInfo.country : "US"}, 
-                 {cityInfo.state !== undefined ? cityInfo.state : "IL"} </h3>
+            <h3> {cityInfo.cityName !== undefined ? cityInfo.cityName : "Chicago "}, 
+                 {cityInfo.country !== undefined ? " " + cityInfo.country : "US "}, 
+                 {cityInfo.state !== undefined ? " " + cityInfo.state : "IL"} </h3>
           </div>
           <div className="summaries">
             <h3> Averages for the Current Time Range </h3>
