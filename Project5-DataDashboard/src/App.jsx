@@ -6,7 +6,7 @@ import Weather from './Components/Weather.jsx';
 const App = () => {
   let API_KEY = "c0de5759fcad4756b6c6f92e042d6716";
   let testQuery = `https://api.weatherbit.io/v2.0/current?city=Chicago&units=I&key=${API_KEY}&include=minutely`;
-  let dayQuery = `https://api.weatherbit.io/v2.0/history/daily?city=Chicago&units=I&start_date=2024-10-22&end_date=2024-10-22&key=${API_KEY}`;
+  let dayQuery = `https://api.weatherbit.io/v2.0/history/daily?city=Chicago&units=I&start_date=2024-10-1&end_date=2024-10-22&key=${API_KEY}`;
 
   const [fetchResult, setFetchResult] = useState([]);
   // const [revFetchResult, setRevFetchResult] = useState([]);
@@ -34,8 +34,8 @@ const App = () => {
       <div className="rest">
         <div className="topBar">
           <div className="cityInfo">
-            <h2> {cityInfo.length > 0 ? cityInfo.cityName : "N/A"} </h2>
-            <h3> {cityInfo.length > 0 ? cityInfo.cityName : "N/A"}, {cityInfo.length > 0 ? cityInfo.country : "N/A"}, {cityInfo.length > 0 ? cityInfo.state : "N/A"} </h3>
+            <h2> {cityInfo.cityName} </h2>
+            <h3> {cityInfo.cityName}, {cityInfo.country}, {cityInfo.state} </h3>
           </div>
           <div className="summaries">
             <h3> Averages for the Current Time Range </h3>
