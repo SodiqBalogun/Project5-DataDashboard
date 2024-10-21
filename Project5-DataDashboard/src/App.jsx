@@ -37,19 +37,28 @@ const App = () => {
             <h2> {cityInfo.cityName} </h2>
             <h3> {cityInfo.cityName}, {cityInfo.country}, {cityInfo.state} </h3>
           </div>
-          <div className="currSummary">
-            <h2> Average Weather </h2>
-            <p> (For current Day) </p>
+          <div className="summaries">
+            <div className="currSummary">
+              <h2> Average Temperature </h2>
+              <p> (For current Period) </p>
+            </div>
+            <div className="currSummary">
+              <h2> Average Relative Humidity </h2>
+              <p> (For current Period) </p>
+            </div>
+            <div className="currSummary">
+              <h2> Average Pressure </h2>
+              <p> (For current Period) </p>
+            </div>
           </div>
         </div>
         <div className="mainFunc"> 
           <p> {fetchResult.temp} </p>
           <Weather dates={fetchResult.map((data, index) => (<p key={index}>{data.datetime}</p>)).reverse()} 
-                   temps={fetchResult.map((data, index) => (<p key={index}>{data.temp} *F</p>)).reverse()} 
-                   humidities={fetchResult.map((data, index) => (<p key={index}>{data.rh}</p>)).reverse()} 
-                   pressures={fetchResult.map((data, index) => (<p key={index}>{data.pres}</p>)).reverse()}
+                   temps={fetchResult.map((data, index) => (<p key={index}>{data.temp} °F</p>)).reverse()} 
+                   humidities={fetchResult.map((data, index) => (<p key={index}>{data.rh}%</p>)).reverse()} 
+                   pressures={fetchResult.map((data, index) => (<p key={index}>{data.pres} mb</p>)).reverse()}
           />
-
         </div>
       </div>
     </div>

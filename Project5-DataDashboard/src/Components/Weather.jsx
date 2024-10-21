@@ -12,7 +12,7 @@ const Weather = ({dates, temps, humidities, pressures} = props) => {
                     {temps}
                 </div>
                 <div className="humidCol">
-                    <h3> Humidity </h3>
+                    <h3> Humidity (Relative) </h3>
                     {humidities}
                 </div>
                 <div className="pressureCol">
