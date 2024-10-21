@@ -6,7 +6,7 @@ import Weather from './Components/Weather.jsx';
 const App = () => {
   let API_KEY = "c0de5759fcad4756b6c6f92e042d6716";
   let testQuery = `https://api.weatherbit.io/v2.0/current?city=Chicago&units=I&key=${API_KEY}&include=minutely`;
-  let dayQuery = `https://api.weatherbit.io/v2.0/history/daily?city=Chicago&units=I&start_date=2024-10-1&end_date=2024-10-20&key=${API_KEY}`;
+  let dayQuery = `https://api.weatherbit.io/v2.0/history/daily?city=Chicago&units=I&start_date=2024-10-1&end_date=2024-10-22&key=${API_KEY}`;
 
   const [fetchResult, setFetchResult] = useState([]);
   // const [revFetchResult, setRevFetchResult] = useState([]);
@@ -42,15 +42,15 @@ const App = () => {
             <div className="summariesCont"> 
               <div className="currSummary">
                 <h2> Average Temperature </h2>
-                <h3> {Math.floor(fetchResult.reduce((acc, day) => acc + day.temp, 0) / fetchResult.length)} °F</h3>
+                <h3> {fetchResult.length > 0 ? Math.floor(fetchResult.reduce((acc, day) => acc + (day.temp || 0), 0) / fetchResult.length) : N/A} °F</h3>
               </div>
               <div className="currSummary">
                 <h2> Average Relative Humidity </h2>
-                <h3> {Math.floor(fetchResult.reduce((acc, day) => acc + day.rh, 0) / fetchResult.length)}% </h3>
+                <h3> {fetchResult.length > 0 ? Math.floor(fetchResult.reduce((acc, day) => acc + (day.rh || 0), 0) / fetchResult.length) : N/A}% </h3>
               </div>
               <div className="currSummary">
                 <h2> Average Pressure </h2>
-                <h3> {Math.floor(fetchResult.reduce((acc, day) => acc + day.pres, 0) / fetchResult.length)} mb</h3>
+                <h3> {fetchResult.length > 0 ? Math.floor(fetchResult.reduce((acc, day) => acc + (day.pres || 0), 0) / fetchResult.length) : N/A} mb</h3>
               </div>
             </div>
           </div>
